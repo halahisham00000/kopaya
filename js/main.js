@@ -23,6 +23,8 @@ if(!navigator.webdriver){
   };
   addEventListener('pointerdown',toggle);
   addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();toggle();}});
+  // autoplay on open; if the browser blocks it, the first click still starts it
+  a.play().then(()=>{hint.style.display='none';}).catch(()=>{});
   (function loop(){
     let t=a.currentTime||0;
     if(!audioOk&&fallbackStart!==null)t=((performance.now()-fallbackStart)/1000)%DUR;
