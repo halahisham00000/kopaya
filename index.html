@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Kopaya</title>
+<style>
+@font-face{font-family:Lalezar;src:url(assets/fonts/Lalezar-Regular.ttf);font-weight:100 900}
+@font-face{font-family:Tajawal;src:url(assets/fonts/Tajawal-Regular.ttf);font-weight:400}
+@font-face{font-family:Tajawal;src:url(assets/fonts/Tajawal-Medium.ttf);font-weight:500}
+@font-face{font-family:Tajawal;src:url(assets/fonts/Tajawal-Bold.ttf);font-weight:700}
+html,body{height:100%;margin:0;background:#3A2216}
+body{display:flex;align-items:center;justify-content:center;overflow:hidden}
+canvas{display:block;height:min(100vh,calc(100vw*16/9));aspect-ratio:9/16}
+#hint{position:fixed;left:50%;bottom:4vh;transform:translateX(-50%);font:700 18px Tajawal,"DejaVu Sans",sans-serif;
+ color:#3A2216;background:#FFF1D6;padding:10px 22px;border-radius:30px;pointer-events:none;direction:rtl}
+</style>
+<canvas id="c" width="1080" height="1920"></canvas>
+<audio id="a" src="assets/preview_mix.mp3" preload="auto"></audio>
+<div id="hint">     </div>
+<script src="js/envelope.js"></script>
+<script src="js/core.js"></script>
+<script src="js/kamal.js"></script>
+<script src="js/props.js"></script>
+<script src="js/shots.js"></script>
+<script src="js/main.js"></script>
